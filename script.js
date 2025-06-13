@@ -138,12 +138,12 @@ function showCategory(category) {
     const card = document.createElement("div");
     card.className = "player-card";
 
-    // Arrow logic
+    // Dynamic arrow and color logic
     let changeHtml = "";
     if (player.change > 0) {
-      changeHtml = `<span style="color:limegreen;font-weight:bold;">&#8593; +0.3</span>`;
+      changeHtml = `<span style="color:limegreen;font-weight:bold;">&#8593; +${player.change}</span>`;
     } else if (player.change < 0) {
-      changeHtml = `<span style="color:#ff4d4d;font-weight:bold;">&#8595; -0.3</span>`;
+      changeHtml = `<span style="color:#ff4d4d;font-weight:bold;">&#8595; ${player.change}</span>`;
     }
 
     card.innerHTML = `
