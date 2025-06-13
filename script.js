@@ -102,8 +102,8 @@ const players = {
     {
       name: `Josh`,
       image: "images/josh.JPG",
-      score: null,
-      change: 8.9,
+      score: 8.9,
+      change: 0,
       description: "I haven't seen this guy play yet but wanted to include him in this list so he doesn't feel left out. Lemme supp you alistar now."
     },
     {
@@ -140,9 +140,9 @@ function showCategory(category) {
 
     // Arrow logic
     let changeHtml = "";
-    if (player.change === 0.3) {
+    if (player.change > 0) {
       changeHtml = `<span style="color:limegreen;font-weight:bold;">&#8593; +0.3</span>`;
-    } else if (player.change === -0.3) {
+    } else if (player.change < 0) {
       changeHtml = `<span style="color:#ff4d4d;font-weight:bold;">&#8595; -0.3</span>`;
     }
 
