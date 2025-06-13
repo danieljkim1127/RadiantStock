@@ -125,7 +125,7 @@ const players = {
       image: "images/jacob.JPG",
       score: 9.8,
       change: -1,
-      description: "I aint never seen this guy play but everyone talks like he's ass."
+      description: "Thank god he's at least tall. Thank god."
     },
   ]
 };
