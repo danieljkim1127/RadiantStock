@@ -108,123 +108,123 @@ const players = {
   ],
   valorant: [
     {
-      name: `JW`,
-      image: "images/jw.PNG",
-      score: 1.5,
-      change: -.5,
-      description: "Usually frags a lot, great aim, consistent, solid game sense. Great first pick to fill out duelist role. Has not played in a minute due to studying."
-    },
-    {
-      name: `Ethan`,
-      image: "images/ethan.jpg",
-      score: 1.8,
-      change: 0.3,
-      description: "Good aim, great game sense, great flex player and can lead shittier teammates. Recently came back to form."
-    },
-    {
-      name: `Hwang`,
-      image: "images/hwang.JPG",
-      score: 2,
-      change: 1,
-      description: "Great aim, good game sense, solid duelist. Either stomps or does okay. Needs to grow taller."
-    },
-    {
-      name: `Michael`,
-      image: "images/mike.jpeg",
-      score: 2.3,
-      change: 1,
-      description: "Great aim and good game sense, but has not played in awhile. Limited agent pool."
-    },
-    {
       name: `Dylan`,
       image: "images/dylan.PNG",
-      score: 3.1,
-      change: -1,
-      description: "Very good aim and very consistent. Great pick for duelist that can actually frag."
-    },
-    {
-      name: `Matt`,
-      image: "images/matt.JPG",
-      score: 4.2,
-      change: 0,
-      description: "Solid aim, great game sense, and a playmaker, but needs good support to execute. Solid flex player."
+      score: 1.6,
+      change: 1.5,
+      description: "A very consistent and high performance the past three games. Can't believe I'm putting him here but he just might be the new top dog. Is it a fluke?"
     },
     {
       name: `Eugene`,
       image: "images/eugene.JPG",
-      score: 4.4,
-      change: -.4,
-      description: "Good aim. Walmart Dylan. Needs to be arrested."
+      score: 2.1,
+      change: 2.3,
+      description: "Was a significant factor in winning his games. Please stop sending tigress."
+    },
+    {
+      name: `Ethan`,
+      image: "images/ethan.jpg",
+      score: 2.3,
+      change: -0.5,
+      description: "A very solid but not dominant performance. Did play supporting agents very well though."
+    },
+    {
+      name: `JW`,
+      image: "images/jw.PNG",
+      score: 2.7,
+      change: -1.2,
+      description: "It's clear studying has made him rusty. If he plays as is, hes goin lower but he might also reclaim his former spot. Volatile pick for future drafts."
+    },
+    {
+      name: `Michael`,
+      image: "images/mike.jpeg",
+      score: 3.3,
+      change: -1,
+      description: "Talked trash in the Mike vs. Dylan matchup, but could not deliver. Perhaps he needed a warmup game."
+    },
+    {
+      name: `Hwang`,
+      image: "images/hwang.JPG",
+      score: 3.5,
+      change: -1.5,
+      description: "Dominated one, got wrecked in others. Very inconsistent performance. He ain't growin taller."
+    },
+    {
+      name: `Matt`,
+      image: "images/matt.JPG",
+      score: 4.1,
+      change: 0.1,
+      description: "Went to go watch and learn from VCT. Seen on TV."
     },
     {
       name: `Jared`,
       image: "images/jared.JPG",
       score: 4.7,
       change: 0,
-      description: "Good player, but definitely barks more than he bites. Lowkey zesty."
+      description: "Last seen scalping pokemon packs. Save me one please."
     },
     {
       name: `Brian Ju`,
       image: "images/brianju.PNG",
-      score: 5.1,
-      change: 0,
-      description: "All aim no brain. Fills initiator role."
+      score: 4.9,
+      change: 0.2,
+      description: "Played very solid."
     },
     {
       name: `Schatz "Mr Unclutchable"`,
       image: "images/schatz.PNG",
-      score: 6.2,
-      change: 0,
-      description: "Great sova player. Has recently been doing very well, but probably overvalued at the moment."
+      score: 6.1,
+      change: 0.1,
+      description: "Went to go watch and learn from VCT. Was not seen on TV"
     },
     {
       name: `Noah`,
       image: "images/noah.PNG",
-      score: 7.6,
-      change: 0,
-      description: "A true role player. Plays what the team needs and has great communication. A misfortune that his aim is ass."
+      score: 7.5,
+      change: 0.1,
+      description: "Went to go watch and learn from VCT. Was not seen on TV"
     },
     {
       name: `JBL`,
       image: "images/boomer.jpeg",
-      score: 8.1,
+      score: 8.4,
       change: -0.3,
-      description: "Plays off meta picks and strats. Lowkey troll."
+      description: "Played just about as you would expect."
+    },
+    {
+      name: `Ron`,
+      image: "images/ron.JPG",
+      score: 8.6,
+      change: 0.6,
+      description: "Saw a glimpse of his former self one game. Only one game though."
     },
     {
       name: `Josh`,
       image: "images/josh.JPG",
       score: 9.1,
-      change: -0.2,
-      description: "I haven't seen this guy play yet but wanted to include him in this list so he doesn't feel left out. Lemme supp you alistar now."
+      change: 0,
+      description: "Still will not lemme supp him alistar."
     },
     {
-      name: `Ron`,
-      image: "images/ron.JPG",
-      score: 9.20,
-      change: -0.6,
-      description: "Used to be good. Used to."
+      name: `Jacob`,
+      image: "images/jacob.JPG",
+      score: 9.4,
+      change: +0.2,
+      description: "Definitely spent more time on his username than actually playing val."
     },
     {
       name: `Dank`,
       image: "images/dank.jpeg",
       score: 9.5,
-      change: -0.3,
-      description: "Still waiting for viper buffs. Only plays when 10 man needs to be filled."
-    },
-    {
-      name: `Jacob`,
-      image: "images/jacob.JPG",
-      score: 9.6,
-      change: +0.2,
-      description: "He posted the black square twice. How good can he be?"
+      change: 0,
+      description: "Preparing to go to switzerland. Let him know if u want any souvenirs."
     },
     {
       name: `JL`,
       image: "images/jl.JPG",
       score: 10,
-      change: -0.4,
-      description: "Recently been given wins as charity due to his brutal loss streak. This guy is straight ass."
+      change: 0,
+      description: "Showed up yesterday just to prove why he's last. 'A penny stock' - jubs"
     },
   ]
 };
