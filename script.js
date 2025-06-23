@@ -108,32 +108,32 @@ const players = {
   ],
   valorant: [
     {
-      name: `Dylan`,
-      image: "images/dylan.PNG",
-      score: 1.6,
-      change: 1.5,
-      description: "A very consistent and high performance the past three games. Can't believe I'm putting him here but he just might be the new top dog. Is it a fluke?"
-    },
-    {
-      name: `Eugene`,
-      image: "images/eugene.JPG",
-      score: 2.1,
-      change: 2.3,
-      description: "Was a significant factor in winning his games. Please stop sending tigress."
-    },
-    {
       name: `Ethan`,
       image: "images/ethan.jpg",
-      score: 2.3,
-      change: -0.5,
-      description: "A very solid but not dominant performance. Did play supporting agents very well though."
+      score: 1.4,
+      change: 0.9,
+      description: "Matt analytics shows he has great stats and an extremely high winrate. On top of making shitters play better and a large agent pool, he is probably the right choice for first pick."
     },
     {
       name: `JW`,
       image: "images/jw.PNG",
-      score: 2.7,
-      change: -1.2,
-      description: "It's clear studying has made him rusty. If he plays as is, hes goin lower but he might also reclaim his former spot. Volatile pick for future drafts."
+      score: 1.6,
+      change: 1.1,
+      description: "Rusty off, busty on. Everyone can't stop looking when he flashes. Finally coming back to form."
+    },
+    {
+      name: `Dylan`,
+      image: "images/dylan.PNG",
+      score: 2.1,
+      change: -.5,
+      description: "Also has an extremely high winrate, but has not been playing as much. The one game he did play did not perform up to expectations."
+    },
+    {
+      name: `Eugene`,
+      image: "images/eugene.JPG",
+      score: 2.4,
+      change: -.3,
+      description: "Still playing very well."
     },
     {
       name: `Michael`,
@@ -150,18 +150,11 @@ const players = {
       description: "Dominated one, got wrecked in others. Very inconsistent performance. He ain't growin taller."
     },
     {
-      name: `Matt`,
-      image: "images/matt.JPG",
-      score: 4.1,
-      change: 0.1,
-      description: "Went to go watch and learn from VCT. Seen on TV."
-    },
-    {
       name: `Jared`,
       image: "images/jared.JPG",
       score: 4.7,
       change: 0,
-      description: "Last seen scalping pokemon packs. Save me one please."
+      description: "Finally came back home with a vengeance but did not do well the one game he played. Most likely underrated for current rating."
     },
     {
       name: `Brian Ju`,
@@ -169,6 +162,13 @@ const players = {
       score: 4.9,
       change: 0.2,
       description: "Played very solid."
+    },
+    {
+      name: `Matt`,
+      image: "images/matt.JPG",
+      score: 5.1,
+      change: -1,
+      description: "His own anayltics reveal that he has good stats, but an abysmal winrate. Undervalued at this rating, but expected to go up once winrate starts to improve."
     },
     {
       name: `Schatz "Mr Unclutchable"`,
@@ -183,13 +183,6 @@ const players = {
       score: 7.5,
       change: 0.1,
       description: "Went to go watch and learn from VCT. Was not seen on TV"
-    },
-    {
-      name: `JBL`,
-      image: "images/boomer.jpeg",
-      score: 8.4,
-      change: -0.3,
-      description: "Played just about as you would expect."
     },
     {
       name: `Ron`,
@@ -209,22 +202,29 @@ const players = {
       name: `Jacob`,
       image: "images/jacob.JPG",
       score: 9.4,
-      change: +0.2,
-      description: "Definitely spent more time on his username than actually playing val."
+      change: 0,
+      description: "Currently in his 6 week training for work. Needs to start getting his priorities straight and get in a 6 week training for val instead."
     },
     {
       name: `Dank`,
       image: "images/dank.jpeg",
       score: 9.5,
       change: 0,
-      description: "Preparing to go to switzerland. Let him know if u want any souvenirs."
+      description: "Finally back from swiss. No one asked for anything."
     },
     {
       name: `JL`,
       image: "images/jl.JPG",
-      score: 10,
-      change: 0,
-      description: "Showed up yesterday just to prove why he's last. 'A penny stock' - jubs"
+      score: 9.6,
+      change: 0.4,
+      description: "Has this guy heard of the range?"
+    },
+    {
+      name: `JBL`,
+      image: "images/boomer.jpeg",
+      score: 9.8,
+      change: -1.4,
+      description: "Matt analytics suggests that his off meta strats picks and gamestyle is just troll."
     },
   ]
 };
