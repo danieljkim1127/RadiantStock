@@ -140,7 +140,7 @@ const players = {
       image: "images/mike.jpeg",
       score: 3.3,
       change: 0,
-      description: "Has this guy been playing?"
+      description: "Has this guy been playing? I would still like to see a Mike v Dylan best of 3 match. One game aint enuff to settle the beef."
     },
     {
       name: `Hwang`,
