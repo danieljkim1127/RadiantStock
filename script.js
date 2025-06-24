@@ -133,21 +133,21 @@ const players = {
       image: "images/eugene.JPG",
       score: 2.4,
       change: -.3,
-      description: "Still playing very well."
+      description: "Has been performing extremely well and consistently. Might even be underrated at this rating."
     },
     {
       name: `Michael`,
       image: "images/mike.jpeg",
       score: 3.3,
-      change: -1,
-      description: "Talked trash in the Mike vs. Dylan matchup, but could not deliver. Perhaps he needed a warmup game."
+      change: 0,
+      description: "Has this guy been playing?"
     },
     {
       name: `Hwang`,
       image: "images/hwang.JPG",
-      score: 3.5,
-      change: -1.5,
-      description: "Dominated one, got wrecked in others. Very inconsistent performance. He ain't growin taller."
+      score: 4.5,
+      change: -1,
+      description: "I swear this guy is gettin worse. It's been ages since I've seen a good game outta him. Does he have trouble reaching the keyboard?"
     },
     {
       name: `Jared`,
@@ -159,44 +159,44 @@ const players = {
     {
       name: `Brian Ju`,
       image: "images/brianju.PNG",
-      score: 4.9,
-      change: 0.2,
-      description: "Played very solid."
+      score: 5.1,
+      change: -0.2,
+      description: "Has not been fragging as much as he should."
     },
     {
       name: `Matt`,
       image: "images/matt.JPG",
-      score: 5.1,
-      change: -1,
+      score: 5.5,
+      change: -1.4,
       description: "His own anayltics reveal that he has good stats, but an abysmal winrate. Undervalued at this rating, but expected to go up once winrate starts to improve."
-    },
-    {
-      name: `Schatz "Mr Unclutchable"`,
-      image: "images/schatz.PNG",
-      score: 6.1,
-      change: 0.1,
-      description: "Went to go watch and learn from VCT. Was not seen on TV"
     },
     {
       name: `Noah`,
       image: "images/noah.PNG",
-      score: 7.5,
-      change: 0.1,
-      description: "Went to go watch and learn from VCT. Was not seen on TV"
+      score: 6.5,
+      change: 1,
+      description: "His stats are horrible but Mattalytics shows he has a very high winrate, probably due to him knowing he's a role player."
+    },
+    {
+      name: `Schatz "Mr Unclutchable"`,
+      image: "images/schatz.PNG",
+      score: 7.1,
+      change: -1,
+      description: "His good performance end runs here (is that last part a tiktok reference?)."
     },
     {
       name: `Ron`,
       image: "images/ron.JPG",
-      score: 8.6,
-      change: 0.6,
-      description: "Saw a glimpse of his former self one game. Only one game though."
+      score: 7.6,
+      change: 1,
+      description: "Seems to be improving. Recently ragebaited matt with his genius first round clove strat."
     },
     {
       name: `Josh`,
       image: "images/josh.JPG",
       score: 9.1,
       change: 0,
-      description: "Still will not lemme supp him alistar."
+      description: "Still waiting for the day he will lemme supp him alistar."
     },
     {
       name: `Jacob`,
@@ -217,14 +217,14 @@ const players = {
       image: "images/jl.JPG",
       score: 9.6,
       change: 0.4,
-      description: "Has this guy heard of the range?"
+      description: "Has this guy ever heard of the range?"
     },
     {
       name: `JBL`,
       image: "images/boomer.jpeg",
       score: 9.8,
       change: -1.4,
-      description: "Matt analytics suggests that his off meta strats picks and gamestyle is just troll."
+      description: "Mattalytics suggests that his seemingly troll gamestyle is just troll."
     },
   ]
 };
