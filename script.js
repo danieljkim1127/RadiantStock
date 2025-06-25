@@ -108,6 +108,13 @@ const players = {
   ],
   valorant: [
     {
+      name: `?`,
+      image: "images/junsooblack.png",
+      score: "?",
+      change: 0,
+      description: "???"
+    },
+    {
       name: `Ethan`,
       image: "images/ethan.jpg",
       score: 1.4,
@@ -256,4 +263,23 @@ function showCategory(category) {
 
     container.appendChild(card);
   });
+}
+
+function showCutscene(callback) {
+  const overlay = document.getElementById("cutscene-overlay");
+  const video = document.getElementById("cutscene-video");
+  overlay.style.display = "flex";
+  overlay.style.opacity = "1";
+  video.currentTime = 0;
+  video.play();
+  // Prevent user interaction
+  overlay.onmousedown = overlay.onmouseup = overlay.onclick = (e) => e.stopPropagation();
+  setTimeout(() => {
+    overlay.style.opacity = "0";
+    setTimeout(() => {
+      video.pause();
+      overlay.style.display = "none";
+      if (callback) callback();
+    }, 500); // Wait for the fade-out transition
+  }, 4000); // 4 seconds
 }
