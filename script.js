@@ -189,7 +189,7 @@ const players = {
       image: "images/ron.JPG",
       score: 6.9,
       change: 1.3,
-      description: "Has been consitently performing well. If this continues he will ikely be moved further up."
+      description: "Has been consistently performing well. If this continues he will ikely be moved further up."
     },
     {
       name: `Schatz "Mr Unclutchable"`,
