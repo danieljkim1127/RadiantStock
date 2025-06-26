@@ -44,3 +44,106 @@ button {
   transition: opacity 0.5s ease;
   opacity: 1;
 }
+
+.motm-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid gold;
+  background: url('images/goldbackground.webp') center center / cover no-repeat, white;
+  color: #222;
+  border-radius: 16px;
+  padding: 0;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  min-height: 180px;
+  position: relative;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.4s, transform 0.4s;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+.motm-box.show {
+  opacity: 1;
+  animation: motm-pop-glow 1.8s cubic-bezier(0.7, 0, 1, 1);
+  box-shadow: 0 0 24px 8px gold, 0 2px 12px rgba(0,0,0,0.08);
+  transform: scale(1);
+}
+
+@keyframes motm-pop-glow {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+    box-shadow: 0 0 0 0 gold;
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.08);
+    box-shadow: 0 0 32px 16px gold;
+  }
+  80% {
+    transform: scale(0.98);
+    box-shadow: 0 0 24px 8px gold, 0 2px 12px rgba(0,0,0,0.08);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 0 24px 8px gold, 0 2px 12px rgba(0,0,0,0.08);
+  }
+}
+
+.motm-img-side {
+  position: relative;
+  width: 180px;
+  min-width: 140px;
+  max-width: 220px;
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  overflow: visible;
+}
+
+.motm-sticker {
+  width: 220px;
+  height: 220px;
+  object-fit: contain;
+  position: absolute;
+  left: 50%;
+  bottom: 30px;
+  transform: translateX(-50%);
+  z-index: 2;
+  pointer-events: none;
+  bottom: -10px;
+}
+
+.motm-title-overlap {
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  color: gold;
+  font-size: 1.2em;
+  text-shadow: 0 2px 8px #222, 0 0 2px #fff;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.motm-desc {
+  flex: 1;
+  font-size: 1em;
+  color: #333;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  background: rgba(255,255,255,0.7); /* Optional: for readability */
+}

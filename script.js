@@ -118,92 +118,99 @@ const players = {
       name: `Ethan`,
       image: "images/ethan.jpg",
       score: 1.4,
-      change: 0.9,
-      description: "Matt analytics shows he has great stats and an extremely high winrate. On top of making shitters play better and a large agent pool, he is probably the right choice for first pick."
+      change: 0,
+      description: "Did not play but still is current best pick."
     },
     {
       name: `JW`,
       image: "images/jw.PNG",
-      score: 1.6,
-      change: 1.1,
-      description: "Rusty off, busty on. Everyone can't stop looking when he flashes. Finally coming back to form."
+      score: 1.7,
+      change: -.1,
+      description: "Did not play up to standards."
     },
     {
       name: `Dylan`,
       image: "images/dylan.PNG",
       score: 2.1,
-      change: -.5,
-      description: "Also has an extremely high winrate, but has not been playing as much. The one game he did play did not perform up to expectations."
+      change: 0,
+      description: "Came on to play but everyone left."
     },
     {
       name: `Eugene`,
       image: "images/eugene.JPG",
-      score: 2.4,
-      change: -.3,
-      description: "Has been performing extremely well and consistently. Might even be underrated at this rating."
+      score: 2.5,
+      change: -0.1,
+      description: "Solid performance but got placed plat 2."
     },
     {
       name: `Michael`,
       image: "images/mike.jpeg",
-      score: 3.3,
-      change: 0,
-      description: "Has this guy been playing? I would still like to see a Mike v Dylan best of 3 match. One game aint enuff to settle the beef."
+      score: 3.4,
+      change: -.1,
+      description: "More worried about pranking than his upcoming legacy match with dylan."
+    },
+    {
+      name: `Jared`,
+      image: "images/jared.JPG",
+      score: 3.7,
+      change: 1,
+      description: "A crazy performance outta him and almost had three aces. Definitely underrated at this ranking, but would like to see more games like this before moving him up."
     },
     {
       name: `Hwang`,
       image: "images/hwang.JPG",
       score: 4.5,
-      change: -1,
-      description: "I swear this guy is gettin worse. It's been ages since I've seen a good game outta him. Does he have trouble reaching the keyboard?"
-    },
-    {
-      name: `Jared`,
-      image: "images/jared.JPG",
-      score: 4.7,
       change: 0,
-      description: "Finally came back home with a vengeance but did not do well the one game he played. Most likely underrated for current rating."
+      description: "He did alright."
     },
     {
       name: `Brian Ju`,
       image: "images/brianju.PNG",
-      score: 5.1,
-      change: -0.2,
-      description: "Has not been fragging as much as he should."
+      score: 5.2,
+      change: -0.1,
+      description: "Busy moving and taking pictures of lebron james"
     },
     {
       name: `Matt`,
       image: "images/matt.JPG",
-      score: 5.5,
-      change: -1.4,
-      description: "His own anayltics reveal that he has good stats, but an abysmal winrate. Undervalued at this rating, but expected to go up once winrate starts to improve."
+      score: 5.4,
+      change: .1,
+      description: "Finally got a win. Still underrated but would like to see more wins before moving him up."
     },
     {
       name: `Noah`,
       image: "images/noah.PNG",
-      score: 6.5,
-      change: 1,
-      description: "His stats are horrible but Mattalytics shows he has a very high winrate, probably due to him knowing he's a role player."
-    },
-    {
-      name: `Schatz "Mr Unclutchable"`,
-      image: "images/schatz.PNG",
-      score: 7.1,
-      change: -1,
-      description: "His good performance end runs here (is that last part a tiktok reference?)."
+      score: 6.7,
+      change: -.2,
+      description: "Only redeeming factor besides coms and being a role player is his winrate. And he lost most recently."
     },
     {
       name: `Ron`,
       image: "images/ron.JPG",
+      score: 6.9,
+      change: 1.3,
+      description: "Has been consitently performing well. If this continues he will ikely be moved further up."
+    },
+    {
+      name: `Schatz "Mr Unclutchable"`,
+      image: "images/schatz.PNG",
       score: 7.6,
-      change: 1,
-      description: "Seems to be improving. Recently ragebaited matt with his genius first round clove strat."
+      change: 0,
+      description: "His good performance end runs here (is that last part a tiktok reference?)."
+    },
+    {
+      name: `JL`,
+      image: "images/jl.JPG",
+      score: 7.8,
+      change: 1.8,
+      description: "Performance of a lifetime. Would like to see more games like this before justifying moving him up further. Might be a one time thing."
     },
     {
       name: `Josh`,
       image: "images/josh.JPG",
       score: 9.1,
       change: 0,
-      description: "Still waiting for the day he will lemme supp him alistar."
+      description: "Busy setting up dinner, poker, and a night out with the boys. Definitely still has the capacity to let me supp him alistar."
     },
     {
       name: `Jacob`,
@@ -213,25 +220,18 @@ const players = {
       description: "Currently in his 6 week training for work. Needs to start getting his priorities straight and get in a 6 week training for val instead."
     },
     {
-      name: `Dank`,
-      image: "images/dank.jpeg",
-      score: 9.5,
-      change: 0,
-      description: "Finally back from swiss. No one asked for anything."
-    },
-    {
-      name: `JL`,
-      image: "images/jl.JPG",
-      score: 9.6,
-      change: 0.4,
-      description: "Has this guy ever heard of the range?"
-    },
-    {
       name: `JBL`,
       image: "images/boomer.jpeg",
       score: 9.8,
-      change: -1.4,
+      change: 0,
       description: "Mattalytics suggests that his seemingly troll gamestyle is just troll."
+    },
+    {
+      name: `Dank`,
+      image: "images/dank.jpeg",
+      score: 9.9,
+      change: -.4,
+      description: "Did not play well do to being sick. Gimme another chance pls"
     },
   ]
 };
@@ -282,4 +282,17 @@ function showCutscene(callback) {
       if (callback) callback();
     }, 500); // Wait for the fade-out transition
   }, 4000); // 4 seconds
+}
+
+function showMotmBox(show) {
+  const motmBox = document.querySelector('.motm-box');
+  if (motmBox) {
+    if (show) {
+      motmBox.style.display = 'flex';
+      setTimeout(() => motmBox.classList.add('show'), 10);
+    } else {
+      motmBox.classList.remove('show');
+      setTimeout(() => motmBox.style.display = 'none', 400);
+    }
+  }
 }
