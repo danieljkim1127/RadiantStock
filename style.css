@@ -147,3 +147,94 @@ button {
   align-items: center;
   background: rgba(255,255,255,0.7); /* Optional: for readability */
 }
+
+.banned-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid red;
+  background: white;
+  color: #222;
+  border-radius: 16px;
+  padding: 0;
+  margin-bottom: 24px;
+  box-shadow: 0 0 24px 8px red, 0 2px 12px rgba(0,0,0,0.08);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  min-height: 180px;
+  position: relative;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.4s, transform 0.4s;
+}
+
+.banned-box.show {
+  opacity: 1;
+  transform: scale(1);
+  animation: banned-glow 1.2s cubic-bezier(0.7, 0, 1, 1);
+}
+
+@keyframes banned-glow {
+  0% { box-shadow: 0 0 0 0 red; }
+  70% { box-shadow: 0 0 32px 16px red; }
+  100% { box-shadow: 0 0 24px 8px red, 0 2px 12px rgba(0,0,0,0.08);}
+}
+
+.banned-img-side {
+  position: relative;
+  width: 180px;
+  min-width: 140px;
+  max-width: 220px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+}
+
+.banned-sticker {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  z-index: 1;
+}
+
+.banned-stamp {
+  position: absolute;
+  left: 50%;
+  top: -120px; /* Start above */
+  width: 140px;
+  transform: translateX(-50%) scale(1.1) rotate(-12deg);
+  opacity: 0.95;
+  z-index: 2;
+  pointer-events: none;
+  animation: none;
+}
+
+.banned-box.show .banned-stamp {
+  animation: banned-slam 0.6s cubic-bezier(0.7, 0, 0.3, 1) forwards;
+}
+
+@keyframes banned-slam {
+  0% {
+    top: -120px;
+    opacity: 0.2;
+    transform: translateX(-50%) scale(1.5) rotate(-12deg);
+  }
+  70% {
+    top: 40px;
+    opacity: 1;
+    transform: translateX(-50%) scale(1.1) rotate(-12deg);
+  }
+  85% {
+    top: 30px;
+    transform: translateX(-50%) scale(1.05) rotate(-12deg);
+  }
+  100% {
+    top: 40px;
+    opacity: 1;
+    transform: translateX(-50%) scale(1.1) rotate(-12deg);
+  }
+}

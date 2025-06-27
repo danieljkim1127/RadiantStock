@@ -119,98 +119,91 @@ const players = {
       image: "images/ethan.jpg",
       score: 1.4,
       change: 0,
-      description: "Did not play but still is current best pick."
+      description: "Had a strong performance and led his team to victory."
     },
     {
       name: `JW`,
       image: "images/jw.PNG",
-      score: 1.7,
-      change: -.1,
-      description: "Did not play up to standards."
+      score: 1.6,
+      change: .1,
+      description: "Fragged as he should but could not catch the series dub."
     },
     {
       name: `Dylan`,
       image: "images/dylan.PNG",
-      score: 2.1,
-      change: 0,
-      description: "Came on to play but everyone left."
+      score: 2.4,
+      change: -.3,
+      description: "Has to thank jl for winning his series with mike. did not do well though."
     },
     {
       name: `Eugene`,
       image: "images/eugene.JPG",
       score: 2.5,
-      change: -0.1,
-      description: "Solid performance but got placed plat 2."
+      change: 0,
+      description: "A solid performance throughout"
     },
     {
       name: `Michael`,
       image: "images/mike.jpeg",
       score: 3.4,
       change: -.1,
-      description: "More worried about pranking than his upcoming legacy match with dylan."
+      description: "Could not win series yesterday due to last minute team swaps. would like a proper rematch."
     },
     {
       name: `Jared`,
       image: "images/jared.JPG",
       score: 3.7,
-      change: 1,
-      description: "A crazy performance outta him and almost had three aces. Definitely underrated at this ranking, but would like to see more games like this before moving him up."
+      change: 0,
+      description: "Spectated for a bit just to see jl drop a bagel."
     },
     {
       name: `Hwang`,
       image: "images/hwang.JPG",
       score: 4.5,
       change: 0,
-      description: "He did alright."
+      description: "Where was he. I miss you buddy."
     },
     {
       name: `Brian Ju`,
       image: "images/brianju.PNG",
       score: 5.2,
-      change: -0.1,
-      description: "Busy moving and taking pictures of lebron james"
+      change: 0,
+      description: "I hope moving in won't keep him from returning for too long"
     },
     {
       name: `Matt`,
       image: "images/matt.JPG",
       score: 5.4,
-      change: .1,
-      description: "Finally got a win. Still underrated but would like to see more wins before moving him up."
-    },
-    {
-      name: `Noah`,
-      image: "images/noah.PNG",
-      score: 6.7,
-      change: -.2,
-      description: "Only redeeming factor besides coms and being a role player is his winrate. And he lost most recently."
+      change: 0,
+      description: "Performed as expected. But the jett was not it the second game."
     },
     {
       name: `Ron`,
       image: "images/ron.JPG",
-      score: 6.9,
-      change: 1.3,
-      description: "Has been consistently performing well. If this continues he will ikely be moved further up."
+      score: 5.9,
+      change: 1,
+      description: "Has been consistently performing well and is attributed to winning mike the first game. why did he leave to cost him the series."
+    },
+    {
+      name: `Noah`,
+      image: "images/noah.PNG",
+      score: 6.8,
+      change: -.1,
+      description: "A strong performance the first game but weaker performances the rest."
     },
     {
       name: `Schatz "Mr Unclutchable"`,
       image: "images/schatz.PNG",
-      score: 7.6,
-      change: 0,
-      description: "His good performance end runs here (is that last part a tiktok reference?)."
-    },
-    {
-      name: `JL`,
-      image: "images/jl.JPG",
-      score: 7.8,
-      change: 1.8,
-      description: "Performance of a lifetime. Would like to see more games like this before justifying moving him up further. Might be a one time thing."
+      score: 7.9,
+      change: -.3,
+      description: "Solid performance first game but very weak performance the rest.."
     },
     {
       name: `Josh`,
       image: "images/josh.JPG",
-      score: 9.1,
-      change: 0,
-      description: "Busy setting up dinner, poker, and a night out with the boys. Definitely still has the capacity to let me supp him alistar."
+      score: 8.1,
+      change: 1,
+      description: "Played one game and left. why"
     },
     {
       name: `Jacob`,
@@ -220,6 +213,13 @@ const players = {
       description: "Currently in his 6 week training for work. Needs to start getting his priorities straight and get in a 6 week training for val instead."
     },
     {
+      name: `Dank`,
+      image: "images/dank.jpeg",
+      score: 9.7,
+      change: +.2,
+      description: "Played unexpectedly and gave three cold clutches and left them without a blanket. brr"
+    },
+    {
       name: `JBL`,
       image: "images/boomer.jpeg",
       score: 9.8,
@@ -227,11 +227,11 @@ const players = {
       description: "Mattalytics suggests that his seemingly troll gamestyle is just troll."
     },
     {
-      name: `Dank`,
-      image: "images/dank.jpeg",
-      score: 9.9,
-      change: -.4,
-      description: "Did not play well do to being sick. Gimme another chance pls"
+      name: `JL`,
+      image: "images/jl.JPG",
+      score: 9.8,
+      change: -2,
+      description: "Fell just as quickly as he rose. 0 kills is crazy."
     },
   ]
 };
@@ -293,6 +293,24 @@ function showMotmBox(show) {
     } else {
       motmBox.classList.remove('show');
       setTimeout(() => motmBox.style.display = 'none', 400);
+    }
+  }
+}
+
+function showBannedBtn(show) {
+  const btn = document.getElementById('banned-btn-container');
+  if (btn) btn.style.display = show ? 'block' : 'none';
+}
+
+function showBannedBox(show) {
+  const bannedBox = document.querySelector('.banned-box');
+  if (bannedBox) {
+    if (show) {
+      bannedBox.style.display = 'flex';
+      setTimeout(() => bannedBox.classList.add('show'), 10);
+    } else {
+      bannedBox.classList.remove('show');
+      setTimeout(() => bannedBox.style.display = 'none', 400);
     }
   }
 }
