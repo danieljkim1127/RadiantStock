@@ -217,6 +217,10 @@ button {
   animation: banned-slam 0.6s cubic-bezier(0.7, 0, 0.3, 1) forwards;
 }
 
+#banned-btn-container {
+  margin-bottom: 16px;
+}
+
 @keyframes banned-slam {
   0% {
     top: -120px;
