@@ -148,6 +148,69 @@ button {
   background: rgba(255,255,255,0.7); /* Optional: for readability */
 }
 
+.vs-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #222;
+  background: white;
+  color: #222;
+  border-radius: 16px;
+  padding: 0;
+  margin-bottom: 24px;
+  box-shadow: 0 0 24px 8px #222, 0 2px 12px rgba(0,0,0,0.08);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  min-height: 260px;
+  position: relative;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.4s, transform 0.4s;
+}
+
+.vs-box.show {
+  opacity: 1;
+  transform: scale(1);
+  animation: banned-glow 1.2s cubic-bezier(0.7, 0, 1, 1);
+}
+
+.vs-side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 260px;
+  position: relative;
+}
+
+.vs-left {
+  background: #e74c3c;
+}
+
+.vs-right {
+  background: #3498db;
+}
+
+.vs-name {
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 8px;
+  text-shadow: 0 2px 8px #222;
+}
+
+.vs-divider {
+  width: 4px;
+  height: 80%;
+  background: #fff;
+  align-self: center;
+  border-radius: 2px;
+  z-index: 2;
+}
+
 .banned-box {
   display: flex;
   justify-content: center;
