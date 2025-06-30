@@ -99,10 +99,10 @@ button {
 
 .motm-img-side {
   position: relative;
-  width: 180px;
+  width: 300px;
   min-width: 140px;
-  max-width: 220px;
-  height: 220px;
+  max-width: 300px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -112,16 +112,15 @@ button {
 }
 
 .motm-sticker {
-  width: 220px;
-  height: 220px;
-  object-fit: contain;
+  width: 100%;      /* Fill the container width */
+  height: 100%;     /* Fill the container height */
+  object-fit: cover;
   position: absolute;
-  left: 50%;
-  bottom: 30px;
-  transform: translateX(-50%);
+  left: 0;
+  top: 0;
+  transform: none;  /* Remove translateX(-50%) if using left:0 */
   z-index: 2;
   pointer-events: none;
-  bottom: -10px;
 }
 
 .motm-title-overlap {

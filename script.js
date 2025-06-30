@@ -119,119 +119,119 @@ const players = {
       image: "./images/ethan.jpg",
       score: 1.4,
       change: 0,
-      description: "Had a strong performance and led his team to victory."
+      description: "Was popping off and almost carried his team to victory, but then JL happened."
     },
     {
       name: `JW`,
       image: "./images/jw.PNG",
-      score: 1.6,
-      change: .1,
-      description: "Fragged as he should but could not catch the series dub."
+      score: 2.2,
+      change: -.6,
+      description: "Needs to practice with some hard boys and step up cuz this guy is on fraud watch."
+    },
+    {
+      name: `Jared`,
+      image: "./images/jared.JPG",
+      score: 2.5,
+      change: 1.2,
+      description: "He might be gay but he definitely played good. (I know its well but alliteration)"
     },
     {
       name: `Dylan`,
       image: "./images/dylan.PNG",
-      score: 2.4,
-      change: -.3,
-      description: "Has to thank jl for winning his series with mike. did not do well though."
+      score: 2.9,
+      change: -.5,
+      description: "Didn't know he was nothing without his roommate Ethan."
     },
     {
       name: `Eugene`,
       image: "./images/eugene.JPG",
-      score: 2.5,
-      change: 0,
-      description: "A solid performance throughout"
+      score: 3.0,
+      change: -.5,
+      description: "He was nothing without his roommate JW but this we did know."
     },
     {
       name: `Michael`,
       image: "./images/mike.png",
       score: 3.4,
-      change: -.1,
-      description: "Could not win series yesterday due to last minute team swaps. would like a proper rematch."
-    },
-    {
-      name: `Jared`,
-      image: "./images/jared.JPG",
-      score: 3.7,
       change: 0,
-      description: "Spectated for a bit just to see jl drop a bagel."
+      description: "Didn't play yesterday. Hope that means he practicin for his rematch with dylan cuz that boy needs to lock in."
     },
     {
       name: `Hwang`,
       image: "./images/hwang.JPG",
       score: 4.5,
       change: 0,
-      description: "Where was he. I miss you buddy."
+      description: "Instead of playing he called me last night saying he wanted to be my pookie. Answers still no btw."
+    },
+    {
+      name: `Matt`,
+      image: "./images/matt.JPG",
+      score: 4.9,
+      change: 0.5,
+      description: "Cold clutches, knifed jw, laughed while doing so. Was serious contender for man of the match."
     },
     {
       name: `Brian Ju`,
       image: "./images/brianju.PNG",
       score: 5.2,
       change: 0,
-      description: "I hope moving in won't keep him from returning for too long"
-    },
-    {
-      name: `Matt`,
-      image: "./images/matt.JPG",
-      score: 5.4,
-      change: 0,
-      description: "Performed as expected. But the jett was not it the second game."
+      description: "I guess his pc still hasn't come in yet."
     },
     {
       name: `Ron`,
       image: "./images/ron.JPG",
-      score: 5.9,
-      change: 1,
-      description: "Has been consistently performing well and is attributed to winning mike the first game. why did he leave to cost him the series."
+      score: 6.1,
+      change: -.2,
+      description: "His series of strong performances finally stopped in its tracks just like him and his fenty fold."
     },
     {
       name: `Noah`,
       image: "./images/noah.PNG",
-      score: 6.8,
-      change: -.1,
+      score: 7.3,
+      change: -.5,
       description: "A strong performance the first game but weaker performances the rest."
     },
     {
       name: `Schatz "Mr Unclutchable"`,
       image: "./images/schatz.PNG",
-      score: 7.9,
-      change: -.3,
-      description: "Solid performance first game but very weak performance the rest.."
+      score: 7.5,
+      change: .4,
+      description: "Keep him on sova."
     },
     {
       name: `Josh`,
       image: "./images/josh.JPG",
       score: 8.1,
       change: 1,
-      description: "Played one game and left. why"
+      description: "Finally offered me to supp him alistar but i had to sleep fml."
+    },
+    {
+      name: `JL`,
+      image: "./images/jl.JPG",
+      score: 8.3,
+      change: 1.5,
+      description: "Ethan and jws kryptonite for some reason."
     },
     {
       name: `Jacob`,
       image: "./images/jacob.JPG",
       score: 9.4,
       change: 0,
-      description: "Currently in his 6 week training for work. Needs to start getting his priorities straight and get in a 6 week training for val instead."
+      description: "Was not seen yesterday. Was probably at kiku."
     },
     {
       name: `Dank`,
       image: "./images/dank.jpeg",
       score: 9.7,
-      change: +.2,
-      description: "Played unexpectedly and gave three cold clutches and left them without a blanket. brr"
+      change: 0,
+      description: "Spectated first game, got motion sick and couldnt watch second. Someone needs to appreciate his work."
     },
     {
       name: `JBL`,
       image: "./images/boomer.jpeg",
       score: 9.8,
       change: 0,
-      description: "Mattalytics suggests that his seemingly troll gamestyle is just troll."
-    },
-    {
-      name: `JL`,
-      image: "./images/jl.JPG",
-      score: 9.8,
-      change: -2,
-      description: "Fell just as quickly as he rose. 0 kills is crazy."
+      description: "Haven't seen this guy in a minute. Lurking irl when he shud be lurking in game."
     },
   ]
 };
