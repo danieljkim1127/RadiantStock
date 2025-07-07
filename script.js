@@ -108,109 +108,109 @@ const players = {
   ],
   valorant: [
     {
-      name: `?`,
-      image: "./images/junsooblack.png",
-      score: "?",
-      change: 0,
-      description: "???"
-    },
-    {
       name: `Ethan`,
       image: "./images/ethan.jpg",
       score: 1.4,
       change: 0,
-      description: "Was popping off and almost carried his team to victory, but then JL happened."
+      description: "Filled and led the team to victory."
     },
     {
       name: `JW`,
       image: "./images/jw.PNG",
       score: 2.2,
-      change: -.6,
-      description: "Needs to practice with some hard boys and step up cuz this guy is on fraud watch."
-    },
-    {
-      name: `Jared`,
-      image: "./images/jared.JPG",
-      score: 2.5,
-      change: 1.2,
-      description: "He might be gay but he definitely played good. (I know its well but alliteration)"
+      change: 0,
+      description: "Omg ur so good and handsome pls bring me back to nycc pls."
     },
     {
       name: `Dylan`,
       image: "./images/dylan.PNG",
-      score: 2.9,
-      change: -.5,
-      description: "Didn't know he was nothing without his roommate Ethan."
+      score: 2.4,
+      change: .5,
+      description: "Very solid performance. Can only play jett tho."
     },
     {
       name: `Eugene`,
       image: "./images/eugene.JPG",
-      score: 3.0,
-      change: -.5,
-      description: "He was nothing without his roommate JW but this we did know."
+      score: 2.5,
+      change: .5,
+      description: "Solid perfomance minus bind."
     },
     {
-      name: `Michael`,
+      name: `Jared`,
+      image: "./images/jared.JPG",
+      score: 2.8,
+      change: -.3,
+      description: "That yoru pick had to be troll. Prob sold cuz mike keeps sending zesty pics of him in chat."
+    },
+    {
+      name: `Dylan's Son`,
       image: "./images/mike.png",
       score: 3.4,
       change: 0,
-      description: "Didn't play yesterday. Hope that means he practicin for his rematch with dylan cuz that boy needs to lock in."
+      description: "Played very well (minus the first game) but could not win the series against Dylan."
     },
     {
       name: `Hwang`,
       image: "./images/hwang.JPG",
       score: 4.5,
       change: 0,
-      description: "Instead of playing he called me last night saying he wanted to be my pookie. Answers still no btw."
+      description: "I bet he won't even be awake when this is sent. If he says smtn five mins after silver surfer sends my message, ill venmo him 5 beans."
     },
     {
       name: `Matt`,
       image: "./images/matt.JPG",
       score: 4.9,
-      change: 0.5,
-      description: "Cold clutches, knifed jw, laughed while doing so. Was serious contender for man of the match."
+      change: 0,
+      description: "Escaped to LA. This guy enjoyin life at erewhon and gamblin soju bottles. "
     },
     {
       name: `Brian Ju`,
       image: "./images/brianju.PNG",
       score: 5.2,
       change: 0,
-      description: "I guess his pc still hasn't come in yet."
+      description: "New headphones signals his return. And a headphone dent."
+    },
+    {
+      name: `Schatz "Mr Unclutchable"`,
+      image: "./images/schatz.PNG",
+      score: 6.5,
+      change: 1,
+      description: "A very solid performance. Can't guard JW tho."
     },
     {
       name: `Ron`,
       image: "./images/ron.JPG",
-      score: 6.1,
-      change: -.2,
-      description: "His series of strong performances finally stopped in its tracks just like him and his fenty fold."
+      score: 7.1,
+      change: -1,
+      description: "Must have been daydreaming about going to ac while playing val. Surely."
     },
     {
       name: `Noah`,
       image: "./images/noah.PNG",
       score: 7.3,
-      change: -.5,
-      description: "A strong performance the first game but weaker performances the rest."
-    },
-    {
-      name: `Schatz "Mr Unclutchable"`,
-      image: "./images/schatz.PNG",
-      score: 7.5,
-      change: .4,
-      description: "Keep him on sova."
+      change: 0,
+      description: "Has been playing league with dank getting on a smurf for him."
     },
     {
       name: `Josh`,
       image: "./images/josh.JPG",
       score: 8.1,
-      change: 1,
-      description: "Finally offered me to supp him alistar but i had to sleep fml."
+      change: 0,
+      description: "Really wants to run back ac for some reason even after what happened last time."
     },
     {
       name: `JL`,
       image: "./images/jl.JPG",
       score: 8.3,
-      change: 1.5,
-      description: "Ethan and jws kryptonite for some reason."
+      change: 0,
+      description: "Was watching league instead of playing. Lets go T1!"
+    },
+    {
+      name: `Gino`,
+      image: "./images/gino.jpg",
+      score: 9.0,
+      change: 0,
+      description: "A surprise appearance. Will need more games to better determine his score."
     },
     {
       name: `Jacob`,
@@ -222,16 +222,23 @@ const players = {
     {
       name: `Dank`,
       image: "./images/dank.jpeg",
-      score: 9.7,
-      change: 0,
-      description: "Spectated first game, got motion sick and couldnt watch second. Someone needs to appreciate his work."
+      score: 9.5,
+      change: 0.2,
+      description: "Outperformed for his level"
     },
     {
       name: `JBL`,
       image: "./images/boomer.jpeg",
       score: 9.8,
       change: 0,
-      description: "Haven't seen this guy in a minute. Lurking irl when he shud be lurking in game."
+      description: "Haven't seen this guy in awhile. Stop goonin and come back"
+    },
+    {
+      name: `Junsoo`,
+      image: "./images/junsoo.jpeg",
+      score: "10.0",
+      change: 0,
+      description: "After a long anticipated entrance, his best play of the night was dying to Ethan to buy time. Cmon"
     },
   ]
 };
