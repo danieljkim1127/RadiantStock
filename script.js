@@ -108,137 +108,130 @@ const players = {
   ],
   valorant: [
     {
-      name: `Ethan`,
-      image: "./images/ethan.jpg",
-      score: 1.4,
-      change: 0,
-      description: "Filled and led the team to victory."
+      name: `JW`,
+      image: "./images/JW.png",
+      score: 1.7,
+      change: 0.5,
+      description: "A god tier performance. Did his brother get on his pc?"
     },
     {
-      name: `JW`,
-      image: "./images/jw.PNG",
-      score: 2.2,
-      change: 0,
-      description: "Omg ur so good and handsome pls bring me back to nycc pls."
+      name: `Ethan`,
+      image: "./images/Ethan.png",
+      score: 1.9,
+      change: -.5,
+      description: "Must have had negative synergy with JL."
     },
     {
       name: `Dylan`,
-      image: "./images/dylan.PNG",
-      score: 2.4,
-      change: .5,
-      description: "Very solid performance. Can only play jett tho."
-    },
-    {
-      name: `Eugene`,
-      image: "./images/eugene.JPG",
-      score: 2.5,
-      change: .5,
-      description: "Solid perfomance minus bind."
+      image: "./images/Dylan.png",
+      score: 2.1,
+      change: .3,
+      description: "Allegedly a dwarf lover?!?!"
     },
     {
       name: `Jared`,
-      image: "./images/jared.JPG",
-      score: 2.8,
+      image: "./images/Jared.png",
+      score: 3.1,
       change: -.3,
-      description: "That yoru pick had to be troll. Prob sold cuz mike keeps sending zesty pics of him in chat."
+      description: "Had to suddenly leave. I hope everything is okay. I'll give you a one week no gay description pass."
     },
     {
       name: `Dylan's Son`,
-      image: "./images/mike.png",
-      score: 3.4,
-      change: 0,
-      description: "Played very well (minus the first game) but could not win the series against Dylan."
+      image: "./images/Mike.png",
+      score: 3.3,
+      change: 0.1,
+      description: "Played well despite bad circumstances."
+    },
+    {
+      name: `Eugene`,
+      image: "./images/Eugene.png",
+      score: 3.7,
+      change: -1.2,
+      description: "."
     },
     {
       name: `Hwang`,
-      image: "./images/hwang.JPG",
-      score: 4.5,
-      change: 0,
-      description: "I bet he won't even be awake when this is sent. If he says smtn five mins after silver surfer sends my message, ill venmo him 5 beans."
+      image: "./images/Hwang.png",
+      score: 4.1,
+      change: 0.4,
+      description: "I'll play with you soon pookie."
     },
     {
       name: `Matt`,
-      image: "./images/matt.JPG",
-      score: 4.9,
-      change: 0,
-      description: "Escaped to LA. This guy enjoyin life at erewhon and gamblin soju bottles. "
+      image: "./images/Matt.png",
+      score: 4.2,
+      change: 0.7,
+      description: "Couldnt make it to boston but made a solid performance."
     },
     {
       name: `Brian Ju`,
-      image: "./images/brianju.PNG",
+      image: "./images/Brian.png",
       score: 5.2,
       change: 0,
-      description: "New headphones signals his return. And a headphone dent."
-    },
-    {
-      name: `Schatz "Mr Unclutchable"`,
-      image: "./images/schatz.PNG",
-      score: 6.5,
-      change: 1,
-      description: "A very solid performance. Can't guard JW tho."
+      description: "Was too busy settin up his 401k. Give me your account details and I'll help you."
     },
     {
       name: `Ron`,
-      image: "./images/ron.JPG",
-      score: 7.1,
-      change: -1,
+      image: "./images/Ron.png",
+      score: 6.5,
+      change: .6,
       description: "Must have been daydreaming about going to ac while playing val. Surely."
     },
     {
+      name: `Schatz "Mr Unclutchable"`,
+      image: "./images/Schatz.png",
+      score: 6.8,
+      change: -.3,
+      description: "A very solid performance. Can't guard JW tho."
+    },
+    {
       name: `Noah`,
-      image: "./images/noah.PNG",
-      score: 7.3,
-      change: 0,
-      description: "Has been playing league with dank getting on a smurf for him."
+      image: "./images/Noah.png",
+      score: 7.8,
+      change: -0.5,
+      description: "Unc was almost put into retirement from val."
     },
     {
       name: `Josh`,
-      image: "./images/josh.JPG",
+      image: "./images/Josh.png",
       score: 8.1,
       change: 0,
-      description: "Really wants to run back ac for some reason even after what happened last time."
+      description: "Busy making plans for friday."
     },
     {
       name: `JL`,
-      image: "./images/jl.JPG",
-      score: 8.3,
-      change: 0,
-      description: "Was watching league instead of playing. Lets go T1!"
-    },
-    {
-      name: `Gino`,
-      image: "./images/gino.jpg",
-      score: 9.0,
-      change: 0,
-      description: "A surprise appearance. Will need more games to better determine his score."
+      image: "./images/JL.png",
+      score: 9.1,
+      change: -.8,
+      description: "Been watching MSI instead of practicing val. Take it from me, it shows."
     },
     {
       name: `Jacob`,
-      image: "./images/jacob.JPG",
+      image: "./images/Jacob.png",
       score: 9.4,
       change: 0,
-      description: "Was not seen yesterday. Was probably at kiku."
+      description: "Congrats :)"
     },
     {
       name: `Dank`,
-      image: "./images/dank.jpeg",
+      image: "./images/Dank.png",
       score: 9.5,
-      change: 0.2,
-      description: "Outperformed for his level"
+      change: 0,
+      description: "The anvil on which war is forged upon."
     },
     {
       name: `JBL`,
-      image: "./images/boomer.jpeg",
+      image: "./images/Booms.png",
       score: 9.8,
       change: 0,
-      description: "Haven't seen this guy in awhile. Stop goonin and come back"
+      description: "My twin."
     },
     {
       name: `Junsoo`,
-      image: "./images/junsoo.jpeg",
+      image: "./images/Junsoo.png",
       score: "10.0",
       change: 0,
-      description: "After a long anticipated entrance, his best play of the night was dying to Ethan to buy time. Cmon"
+      description: "I worked so hard making animations to hype his entrance just for this guy to shit the bed."
     },
   ]
 };
@@ -287,7 +280,7 @@ function showCutscene(callback, videoSrc) {
   if (videoSrc) {
     video.src = videoSrc;
   } else {
-    video.src = "./videos/challenger2.mp4"; // default
+    video.src = "./videos/0713.mp4"; // default
   }
   video.currentTime = 0;
   video.play();

@@ -26,19 +26,14 @@ button {
 }
 
 .player-card img {
-  width: 80px;
-  height: 80px;
-  min-width: 80px;
-  min-height: 80px;
-  max-width: 80px;
-  max-height: 80px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-right: 16px;
-  flex-shrink: 0; /* Prevent shrinking on small screens */
+  width: 100%;
+  height: auto;
+  border-radius: 0;
+  object-fit: contain;
   display: block;
+  margin-right: 0;
+  max-width: 220px; /* Optional: set a max width for card images */
 }
-
 
 #cutscene-overlay {
   transition: opacity 0.5s ease;

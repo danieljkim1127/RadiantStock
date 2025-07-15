@@ -10,16 +10,16 @@
   <div class="category-buttons">
     <h3>Rankings for customs</h3>
 <button onclick="showCategory('league'); showMotmBox(false); showBannedBtn(false); showBannedBox(false);">League</button>
-<button onclick="showCutscene(() => { showCategory('valorant'); showMotmBox(true); showBannedBtn(true); }, './videos/challenger2.mp4')">Valorant</button>
+<button onclick="showCutscene(() => { showCategory('valorant'); showMotmBox(true); showBannedBtn(true); }, './videos/0713.mp4')">Valorant</button>
   </div>
 
 <!-- <div id="vs-btn-container" style="display:none; margin: 16px 0;">
   <button id="vs-btn">Who wins?</button>
 </div> -->
 
-<div id="banned-btn-container" style="display:none;">
+<!-- <div id="banned-btn-container" style="display:none;">
   <button onclick="showBannedBox(true)">What's this?</button>
-</div>
+</div> -->
 
 <!-- <div id="vs-title" style="display:none; text-align:center; font-size:1.5em; font-weight:bold; margin-top:24px; margin-bottom:8px;">
   Witness them settle the beef! Who is better between them?!?!?
@@ -36,26 +36,26 @@
   </div>
 </div> -->
 
-  <div class="motm-box" style="display:none;">
+  <!-- <div class="motm-box" style="display:none;">
   <div class="motm-img-side">
     <img src="./images/fakejared.png" alt="Sticker" class="motm-sticker" />
     <div class="motm-title-overlap">Man of the Match</div>
   </div>
-</div>
+</div> -->
 
-<div class="banned-box" style="display:none;">
+<!-- <div class="banned-box" style="display:none;">
   <div class="banned-img-side">
     <img src="./images/badnoah.png" alt="Sticker" class="banned-sticker" />
     <img src="./images/banned.png" alt="Banned" class="banned-stamp" />
   </div>
-</div>
+</div> -->
 
   <div id="players-container"></div>
 
   <div id="cutscene-overlay" style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:black;z-index:9999;justify-content:center;align-items:center;">
   <video
     id="cutscene-video"
-    src="./videos/challenger2.mp4"
+    src="./videos/0713.mp4"
     style="max-width:90vw;max-height:90vh;"
     playsinline
   ></video>
