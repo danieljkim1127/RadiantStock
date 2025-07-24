@@ -110,128 +110,128 @@ const players = {
     {
       name: `JW`,
       image: "./images/JW.png",
-      score: 1.7,
-      change: 0.5,
-      description: "A god tier performance. Did his brother get on his pc?"
+      score: 1.8,
+      change: -.1,
+      description: "Came to visit me for food"
     },
     {
       name: `Ethan`,
       image: "./images/Ethan.png",
-      score: 1.9,
+      score: 2.4,
       change: -.5,
-      description: "Must have had negative synergy with JL."
+      description: "Neon ain't in his bag."
+    },
+    {
+      name: `Michael`,
+      image: "./images/michaelk14.png",
+      score: 2.5,
+      change: 0.8,
+      description: "Came to visit me to pose for this picture."
     },
     {
       name: `Dylan`,
       image: "./images/Dylan.png",
-      score: 2.1,
-      change: .3,
-      description: "Allegedly a dwarf lover?!?!"
+      score: 2.7,
+      change: -.6,
+      description: "Had to change username to escape dwarf lover allegations. Still a dwarf lover."
     },
     {
       name: `Jared`,
       image: "./images/Jared.png",
       score: 3.1,
-      change: -.3,
-      description: "Had to suddenly leave. I hope everything is okay. I'll give you a one week no gay description pass."
-    },
-    {
-      name: `Dylan's Son`,
-      image: "./images/Mike.png",
-      score: 3.3,
-      change: 0.1,
-      description: "Played well despite bad circumstances."
+      change: 0,
+      description: "Has not been playing due to job search. Good luck pookie. I'm still waiting for that picture btw."
     },
     {
       name: `Eugene`,
       image: "./images/Eugene.png",
-      score: 3.7,
-      change: -1.2,
-      description: "."
+      score: 3.4,
+      change: .3,
+      description: "Brim lineups has been boosting his performance as well as the knowledge stat."
     },
     {
       name: `Hwang`,
       image: "./images/Hwang.png",
-      score: 4.1,
-      change: 0.4,
-      description: "I'll play with you soon pookie."
+      score: 3.9,
+      change: 0.2,
+      description: "This guy is jumping up and down because he's finally not a silver card anymore."
     },
     {
       name: `Matt`,
       image: "./images/Matt.png",
-      score: 4.2,
-      change: 0.7,
-      description: "Couldnt make it to boston but made a solid performance."
+      score: 4.8,
+      change: -.6,
+      description: "Tried to do a shahats sova cosplay. Did not work out too well."
     },
     {
       name: `Brian Ju`,
       image: "./images/Brian.png",
-      score: 5.2,
-      change: 0,
-      description: "Was too busy settin up his 401k. Give me your account details and I'll help you."
+      score: 5.8,
+      change: -.6,
+      description: "Not being able to play consistently has affected performance."
     },
     {
       name: `Ron`,
-      image: "./images/Ron.png",
-      score: 6.5,
-      change: .6,
-      description: "Must have been daydreaming about going to ac while playing val. Surely."
+      image: "./images/Ronen.png",
+      score: 6.3,
+      change: .2,
+      description: "Is deadlock his only bag?"
     },
     {
       name: `Schatz "Mr Unclutchable"`,
-      image: "./images/Schatz.png",
+      image: "./images/Shahats.png",
       score: 6.8,
-      change: -.3,
-      description: "A very solid performance. Can't guard JW tho."
+      change: 0,
+      description: "Getting ready for the 999 challenge. Nine dudes, nine finishes, nine minutes."
     },
     {
       name: `Noah`,
       image: "./images/Noah.png",
       score: 7.8,
-      change: -0.5,
-      description: "Unc was almost put into retirement from val."
+      change: 0,
+      description: "Great comms even while not playing."
     },
     {
       name: `Josh`,
       image: "./images/Josh.png",
       score: 8.1,
       change: 0,
-      description: "Busy making plans for friday."
+      description: "Coming for hwangs number one league spot."
+    },
+     {
+      name: `JBL`,
+      image: "./images/Booms.png",
+      score: 8.9,
+      change: 0.9,
+      description: "A certified troll in every game."
     },
     {
       name: `JL`,
       image: "./images/JL.png",
       score: 9.1,
-      change: -.8,
-      description: "Been watching MSI instead of practicing val. Take it from me, it shows."
+      change: 0,
+      description: "Embodiment of a chihuahua."
     },
     {
       name: `Jacob`,
       image: "./images/Jacob.png",
       score: 9.4,
       change: 0,
-      description: "Congrats :)"
+      description: "MIA"
     },
     {
       name: `Dank`,
       image: "./images/Dank.png",
       score: 9.5,
       change: 0,
-      description: "The anvil on which war is forged upon."
-    },
-    {
-      name: `JBL`,
-      image: "./images/Booms.png",
-      score: 9.8,
-      change: 0,
-      description: "My twin."
+      description: "Top 3000 merge tactics player in the world."
     },
     {
       name: `Junsoo`,
       image: "./images/Junsoo.png",
       score: "10.0",
       change: 0,
-      description: "I worked so hard making animations to hype his entrance just for this guy to shit the bed."
+      description: "I'm keeping his animation up."
     },
   ]
 };
