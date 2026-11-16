@@ -39,7 +39,7 @@ const leaguePlayers = [
   },
   {
     name: `Noah`,
-    image: "./images/noah.PNG",
+    image: "./images/Noah.png",
     score: 3.8,
     change: 0,
     description: "Has a hard time converting his lead into a victory"
@@ -103,7 +103,7 @@ const leaguePlayers = [
   },
   {
     name: `Schatz`,
-    image: "./images/schatz.PNG",
+    image: "./images/Schatz.png",
     score: 8.3,
     change: 0,
     description: "Support main, flexible in more ways than one"
