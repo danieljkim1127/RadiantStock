@@ -29,7 +29,7 @@ const leaguePlayers = [
     name: `Jared`,
     image: "./images/jared3.jpg",
     score: 3.3,
-    description: "Let's see what the new analyst has to say about the new rankings"
+    description: "What does the new analyst think about new rankings?"
   },
   {
     name: `JL`,
