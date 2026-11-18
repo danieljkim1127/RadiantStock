@@ -1,119 +1,112 @@
 const leaguePlayers = [
   {
-    name: `jashik22`,
-    image: "./images/joshgood.PNG",
+    name: `Josh`,
+    image: "./images/josh.JPG",
     score: 1.2,
-    change: 0,
-    motm: true,
-    description: "Came back to put Hwang in his place"
+    description: "Has been quiet lately trying to duck the Hwang fade"
   },
   {
     name: `Hwang`,
     image: "./images/hwang.JPG",
     score: 1.6,
-    change: 0,
-    noSheen: true,
-    description: "Allegedly 16-0 against Josh."
+    description: "Last seen grinding ranked to reclaim his throne"
+  },
+  {
+    name: `enjae`,
+    image: "./images/noahgood.JPG",
+    score: 2.4,
+    prevScore: 3.8,
+    motm: true,
+    description: "Finally broke his glass ceiling"
   },
   {
     name: `Robert`,
     image: "./images/robert.JPG",
     score: 2.6,
-    change: 0,
     description: "Leblanc jumpscares left and right"
   },
   {
     name: `Jared`,
     image: "./images/jared3.jpg",
     score: 3.3,
-    change: 0,
-    description: "The smolder late game did not pay off"
-  },
-  {
-    name: `brown day fan`,
-    image: "./images/rongood.jpg",
-    score: 3.7,
-    change: 0,
-    winstreak: true,
-    description: "Noah's glass ceiling"
-  },
-  {
-    name: `Noah`,
-    image: "./images/Noah.png",
-    score: 3.8,
-    change: 0,
-    description: "Has a hard time converting his lead into a victory"
+    description: "Let's see what the new analyst has to say about the new rankings"
   },
   {
     name: `JL`,
     image: "./images/jl.JPG",
-    score: 4.1,
-    change: 0,
-    description: "Gnar masterclass. Performed well on an off role"
+    score: 3.8,
+    prevScore: 4.1,
+    description: "How's the winstreak buddy?"
   },
   {
     name: `Gino`,
     image: "./images/gino.jpg",
-    score: 4.3,
-    change: 0,
-    description: "Performance? Solid. Silver bullet? Gnar"
-  },
-  {
-    name: `Dank`,
-    image: "./images/dank.jpeg",
-    score: 4.4,
-    change: 0,
-    description: "The anvil returns"
-  },
-  {
-    name: `Matt`,
-    image: "./images/matt.JPG",
-    score: 4.5,
-    change: 0,
-    description: "Some highs and lows in his recent career"
+    score: 4.0,
+    prevScore: 4.3,
+    description: "Performed well in an off role"
   },
   {
     name: `Junsoo`,
     image: "./images/junsoo.jpeg",
-    score: 5.1,
-    change: 0,
-    description: "Finally broke the curse and won a baron smite"
+    score: 4.3,
+    prevScore: 5.1,
+    description: "Great performance all around"
+  },
+  {
+    name: `Matt`,
+    image: "./images/matt.JPG",
+    score: 4.4,
+    prevScore: 4.5,
+    winstreak: 3,
+    description: "Unnoteworthy performance, but snagged a couple wins"
+  },
+  {
+    name: `Dank`,
+    image: "./images/dank.jpeg",
+    score: 5.4,
+    prevScore: 4.4,
+    description: "Anvil was a little rusty"
   },
   {
     name: `JBL`,
     image: "./images/boomer.jpeg",
-    score: 6.5,
-    change: 0,
-    rusty: true,
-    description: "Last I heard, still playing off meta picks"
+    score: 6.4,
+    prevScore: 6.5,
+    description: "Finally went a regular character and build"
+  },
+  {
+    name: `Caesar`,
+    image: "./images/shatzgood.PNG",
+    score: 7.1,
+    prevScore: 8.3,
+    inForm: true,
+    description: "High performance and a high winrate"
   },
   {
     name: `Eugene`,
     image: "./images/eugene.JPG",
     score: 7.3,
-    change: 0,
     description: "Had 0 kills both games"
   },
   {
-    name: `Ethan`,
-    image: "./images/ethan.jpg",
-    score: 8.2,
-    change: 0,
-    description: "Amumu ban was detrimental to performance"
+    name: `Ronen`,
+    image: "./images/ron.JPG",
+    score: 7.5,
+    prevScore: 3.7,
+    description: "Man was stat padding"
   },
   {
-    name: `Schatz`,
-    image: "./images/Schatz.png",
+    name: `Ethan`,
+    image: "./images/ethanbad.JPEG",
     score: 8.3,
-    change: 0,
-    description: "Support main, flexible in more ways than one"
+    prevScore: 8.2,
+    description: "Performance suffered due to team diff"
   },
   {
     name: `Dylan`,
     image: "./images/dylan-league.png",
     score: 9.6,
-    change: 0,
-    description: "AI bot cosplay"
+    description: "Was last seen practicing against AI bots"
   },
 ];
 
@@ -143,16 +136,23 @@ function renderLeaderboard() {
 
     const card = document.createElement("div");
     card.className = `player-card tier-${tier}`;
-    if (player.winstreak) card.classList.add("winstreak");
+    if (player.inForm) card.classList.add("in-form");
     if (player.motm) card.classList.add("motm");
     if (player.rusty) card.classList.add("rusty");
-    if (player.noSheen) card.classList.add("no-sheen");
+    if (player.winstreak) card.classList.add("winstreak");
 
+    // Movement since the last update: a lower score is better, so a drop
+    // in score (e.g. 3.8 -> 2.4) is a positive/"up" change. Set a player's
+    // prevScore to their old score when you update their score, and this
+    // computes and displays the diff automatically.
     let changeHtml = "";
-    if (player.change > 0) {
-      changeHtml = `<span class="change up">&#8593; +${player.change}</span>`;
-    } else if (player.change < 0) {
-      changeHtml = `<span class="change down">&#8595; ${player.change}</span>`;
+    if (player.prevScore != null) {
+      const change = Math.round((player.prevScore - player.score) * 10) / 10;
+      if (change > 0) {
+        changeHtml = `<span class="change up">&#8593; +${change}</span>`;
+      } else if (change < 0) {
+        changeHtml = `<span class="change down">&#8595; ${change}</span>`;
+      }
     }
 
     // Only one corner tag per card - whichever status is actually driving
@@ -162,22 +162,40 @@ function renderLeaderboard() {
       statusTag = `<span class="status-tag rusty-tag" title="Hasn't played in a while - rank may be inaccurate">Rusty</span>`;
     } else if (player.motm) {
       statusTag = `<span class="status-tag motm-tag" title="Man of the Match - most recent customs">MOTM</span>`;
-    } else if (player.winstreak) {
-      statusTag = `<span class="status-tag winstreak-tag" title="In form - on a hot streak">In Form</span>`;
+    } else if (player.inForm) {
+      statusTag = `<span class="status-tag in-form-tag" title="In form - on a hot streak">In Form</span>`;
     }
+
+    // Win streak is a separate, stackable chip (not part of the one-tag
+    // priority above) - a player can be rusty/motm/in-form AND on a streak
+    // at the same time, so it normally sits in its own slot under the main
+    // tag. If there's no main tag, it moves up into that top slot instead
+    // of leaving it empty.
+    const streakTag = player.winstreak
+      ? `<span class="status-tag winstreak-tag${statusTag ? "" : " winstreak-solo"}" title="${player.winstreak} game win streak">&#128293; Winstreak ${player.winstreak}</span>`
+      : "";
 
     card.innerHTML = `
       ${statusTag}
+      ${streakTag}
       <div class="rank-badge">${player.score}</div>
       <img src="${player.image}" alt="${player.name}" />
       <div class="card-body">
         <h3>${player.name}</h3>
-        <p class="score-line"><span class="score">OVR ${ovr}</span> ${changeHtml}</p>
+        <p class="score-line"><span class="score">OVR ${ovr}</span></p>
         <p class="description">${player.description}</p>
       </div>
     `;
 
-    container.appendChild(card);
+    // The change indicator sits outside the card, to its left, rather than
+    // inside the rank-badge - keeps it visibly separate from the card's own
+    // score/OVR instead of reading as part of either number.
+    const row = document.createElement("div");
+    row.className = "player-row";
+    row.innerHTML = `<div class="rank-change">${changeHtml}</div>`;
+    row.appendChild(card);
+
+    container.appendChild(row);
   });
 }
 

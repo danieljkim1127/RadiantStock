@@ -23,8 +23,8 @@
   --motm-blue: #2f6fed;
   --motm-blue-bright: #6fa6ff;
   --motm-deep: #0b1230;
-  --winstreak-ink: #05060a;
-  --winstreak-ember: #ff8a50;
+  --in-form-ink: #05060a;
+  --in-form-ember: #ff8a50;
   --rust: #6b5b4d;
   --rust-dark: #322c25;
 }
@@ -122,10 +122,26 @@ body {
   gap: 14px;
 }
 
+.player-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Reserves its width whether or not this player has a change to show, so
+   every card's left edge still lines up with the rows that do have one. */
+.rank-change {
+  width: 46px;
+  flex-shrink: 0;
+  text-align: center;
+}
+
 .player-card {
   --img-size: 130px;
   --rank-w: 38px;
   --gap: 18px;
+  flex: 1;
+  min-width: 0;
   position: relative;
   display: flex;
   align-items: center;
@@ -142,8 +158,9 @@ body {
    only the name needs the clearance, so the description below it can
    still use the card's full width (keeping wrap/height consistent). */
 .player-card.motm .card-body h3,
-.player-card.winstreak .card-body h3,
-.player-card.rusty .card-body h3 {
+.player-card.in-form .card-body h3,
+.player-card.rusty .card-body h3,
+.player-card.winstreak .card-body h3 {
   padding-right: 110px;
 }
 
@@ -164,6 +181,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* The score's own movement lives in its own column outside the card -
+   not next to OVR, which is a different (derived, 40-100) scale and made
+   the diff read as if it were an OVR change. */
+.rank-change .change {
+  font-size: 0.8rem;
+  white-space: nowrap;
 }
 
 /* --- Tier (OVR 40-100, derived from each player's score) ---
@@ -212,19 +237,6 @@ body {
 }
 .player-card.tier-white .rank-badge { color: var(--tier-gold); text-shadow: 0 0 10px rgba(255, 209, 102, 0.7), 0 0 6px rgba(244, 246, 251, 0.6); }
 
-.player-card.tier-white::after {
-  content: "";
-  position: absolute;
-  top: -60%;
-  left: -70%;
-  width: 35%;
-  height: 220%;
-  background: linear-gradient(115deg, transparent 0%, rgba(255, 255, 255, 0.55) 42%, rgba(255, 209, 102, 0.4) 58%, transparent 100%);
-  transform: rotate(12deg);
-  animation: shine-sweep 4.5s ease-in-out infinite;
-  pointer-events: none;
-}
-
 @keyframes shine-sweep {
   0%, 15% { left: -70%; }
   65%, 100% { left: 120%; }
@@ -256,10 +268,10 @@ body {
   box-shadow: 0 0 10px rgba(111, 166, 255, 0.35);
 }
 
-.winstreak-tag {
-  color: var(--winstreak-ember);
+.in-form-tag {
+  color: var(--in-form-ember);
   background: rgba(255, 138, 80, 0.12);
-  border: 1px solid var(--winstreak-ember);
+  border: 1px solid var(--in-form-ember);
   box-shadow: 0 0 10px rgba(255, 138, 80, 0.3);
 }
 
@@ -269,12 +281,28 @@ body {
   border: 1px solid var(--rust);
 }
 
+/* Stacks under the main status-tag slot (top: 14px) instead of sharing it,
+   since a win streak can coexist with rusty/motm/in-form. When there's no
+   main tag, script.js adds .winstreak-solo to move it up into that slot
+   instead of leaving the top one empty. */
+.winstreak-tag {
+  top: 46px;
+  color: #ffb347;
+  background: rgba(255, 90, 31, 0.16);
+  border: 1px solid #ff6b35;
+  box-shadow: 0 0 10px rgba(255, 90, 31, 0.4);
+}
+
+.winstreak-tag.winstreak-solo {
+  top: 14px;
+}
+
 /* --- Special-edition overrides, FIFA-card style ---
-   Source order sets priority: winstreak < motm < rusty (rusty wins all),
+   Source order sets priority: in-form < motm < rusty (rusty wins all),
    but rusty is deliberately the plainest-looking state of the three -
    a stale rank shouldn't look more exciting than a normal card. */
 
-.player-card.winstreak {
+.player-card.in-form {
   position: relative;
   overflow: hidden;
 }
@@ -284,42 +312,44 @@ body {
    border stays the tier's own color (bronze/silver/gold/white). The tier
    color is now the dominant base tone and black is the accent (weave lines
    + corner vignette), the reverse of a black base with a tier-color accent. */
-.player-card.tier-bronze.winstreak {
+.player-card.tier-bronze.in-form {
   background:
     repeating-linear-gradient(135deg, rgba(5, 6, 10, 0.24) 0px, rgba(5, 6, 10, 0.24) 2px, transparent 2px, transparent 11px),
     radial-gradient(circle at 100% 0%, rgba(5, 6, 10, 0.4), transparent 55%),
-    linear-gradient(135deg, var(--winstreak-ink) 0%, rgba(138, 90, 63, 0.6) 70%);
+    linear-gradient(135deg, var(--in-form-ink) 0%, rgba(138, 90, 63, 0.6) 70%);
   box-shadow: 0 0 18px rgba(138, 90, 63, 0.24), inset 0 0 26px rgba(5, 6, 10, 0.2);
 }
 
-.player-card.tier-silver.winstreak {
+.player-card.tier-silver.in-form {
   background:
     repeating-linear-gradient(135deg, rgba(5, 6, 10, 0.22) 0px, rgba(5, 6, 10, 0.22) 2px, transparent 2px, transparent 11px),
     radial-gradient(circle at 100% 0%, rgba(5, 6, 10, 0.36), transparent 55%),
-    linear-gradient(135deg, var(--winstreak-ink) 0%, rgba(199, 206, 221, 0.5) 70%);
+    linear-gradient(135deg, var(--in-form-ink) 0%, rgba(199, 206, 221, 0.5) 70%);
   box-shadow: 0 0 18px rgba(199, 206, 221, 0.2), inset 0 0 26px rgba(5, 6, 10, 0.2);
 }
 
-.player-card.tier-gold.winstreak {
+.player-card.tier-gold.in-form {
   background:
     repeating-linear-gradient(135deg, rgba(5, 6, 10, 0.24) 0px, rgba(5, 6, 10, 0.24) 2px, transparent 2px, transparent 11px),
     radial-gradient(circle at 100% 0%, rgba(5, 6, 10, 0.4), transparent 55%),
-    linear-gradient(135deg, var(--winstreak-ink) 0%, rgba(255, 209, 102, 0.6) 70%);
+    linear-gradient(135deg, var(--in-form-ink) 0%, rgba(255, 209, 102, 0.6) 70%);
   box-shadow: 0 0 24px rgba(255, 209, 102, 0.3), inset 0 0 28px rgba(5, 6, 10, 0.22);
 }
 
-.player-card.tier-white.winstreak {
+.player-card.tier-white.in-form {
   background:
     radial-gradient(circle at 100% 0%, rgba(5, 6, 10, 0.35), transparent 55%),
     radial-gradient(circle at 0% 100%, rgba(5, 6, 10, 0.3), transparent 55%),
-    linear-gradient(135deg, var(--winstreak-ink) 0%, rgba(244, 246, 251, 0.35) 55%, rgba(255, 209, 102, 0.5) 85%);
+    linear-gradient(135deg, var(--in-form-ink) 0%, rgba(244, 246, 251, 0.35) 55%, rgba(255, 209, 102, 0.5) 85%);
   box-shadow: 0 0 28px rgba(255, 209, 102, 0.28), 0 0 16px rgba(244, 246, 251, 0.3), inset 0 0 30px rgba(5, 6, 10, 0.2);
 }
 
 /* The shine sweep itself just needs geometry/timing - color comes from the
-   tier-specific rules below, so a winstreak card keeps its tier's palette
-   (bronze/silver/gold/white) instead of a one-size-fits-all look. */
-.player-card.winstreak::after {
+   tier-specific rules below, so an in-form card keeps its tier's palette
+   (bronze/silver/gold/white) instead of a one-size-fits-all look. Tiers
+   below white have no sheen unless they're in-form; a 90+ (tier-white)
+   card is the one case that's plain by default and shines once in form. */
+.player-card.in-form::after {
   content: "";
   position: absolute;
   top: -60%;
@@ -331,25 +361,20 @@ body {
   pointer-events: none;
 }
 
-.player-card.tier-bronze.winstreak::after {
+.player-card.tier-bronze.in-form::after {
   background: linear-gradient(115deg, transparent 0%, rgba(255, 255, 255, 0.3) 45%, rgba(138, 90, 63, 0.45) 60%, transparent 100%);
 }
 
-.player-card.tier-silver.winstreak::after {
+.player-card.tier-silver.in-form::after {
   background: linear-gradient(115deg, transparent 0%, rgba(255, 255, 255, 0.4) 45%, rgba(199, 206, 221, 0.45) 60%, transparent 100%);
 }
 
-.player-card.tier-gold.winstreak::after {
+.player-card.tier-gold.in-form::after {
   background: linear-gradient(115deg, transparent 0%, rgba(255, 255, 255, 0.4) 45%, rgba(255, 209, 102, 0.45) 60%, transparent 100%);
 }
 
-/* tier-white already has its own gold/white shine (.player-card.tier-white::after)
-   that applies with or without a win streak, so no override is needed here. */
-
-/* Opt a specific card out of its tier's animated shine sweep while keeping
-   everything else about the card (colors, border, box-shadow) unchanged. */
-.player-card.no-sheen::after {
-  display: none;
+.player-card.tier-white.in-form::after {
+  background: linear-gradient(115deg, transparent 0%, rgba(255, 255, 255, 0.55) 42%, rgba(255, 209, 102, 0.4) 58%, transparent 100%);
 }
 
 /* MOTM "spotlight" splash art: light rays bursting from the corner,
@@ -399,6 +424,29 @@ body {
 .player-card.rusty img { filter: grayscale(0.5) sepia(0.3) saturate(0.7) contrast(0.9); }
 .player-card.rusty::after { display: none; }
 
+/* On a win streak: a flickering flame glow wrapped around the card, layered
+   on top of whatever tier/status styling is already there (only the border
+   and outer glow change - the background/pattern underneath is untouched). */
+.player-card.winstreak {
+  border-color: #ff6b35;
+  animation: fire-flicker 1.6s ease-in-out infinite;
+}
+
+@keyframes fire-flicker {
+  0%, 100% {
+    box-shadow:
+      0 0 14px 2px rgba(255, 90, 31, 0.55),
+      0 0 34px 6px rgba(255, 150, 20, 0.35),
+      inset 0 0 22px rgba(255, 90, 31, 0.12);
+  }
+  50% {
+    box-shadow:
+      0 0 20px 4px rgba(255, 140, 20, 0.75),
+      0 0 46px 10px rgba(255, 90, 20, 0.5),
+      inset 0 0 26px rgba(255, 140, 20, 0.18);
+  }
+}
+
 .player-card img {
   width: var(--img-size);
   height: var(--img-size);
@@ -440,7 +488,6 @@ body {
 
 .change {
   font-weight: 700;
-  margin-left: 6px;
 }
 
 .change.up { color: var(--up); }
@@ -451,6 +498,16 @@ body {
   font-size: 0.9rem;
   color: var(--text-dim);
   line-height: 1.4;
+}
+
+.site-footer {
+  max-width: 820px;
+  margin: 28px auto 0;
+  padding: 0 20px;
+  text-align: center;
+  color: var(--text-dim);
+  font-size: 0.85rem;
+  line-height: 1.5;
 }
 
 .toast {
@@ -477,17 +534,36 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .player-card.tier-white::after,
-  .player-card.winstreak::after,
+  .player-card.in-form::after,
   .player-card.motm::after {
     animation: none;
     display: none;
+  }
+
+  .player-card.winstreak {
+    animation: none;
+    box-shadow:
+      0 0 14px 2px rgba(255, 90, 31, 0.55),
+      0 0 34px 6px rgba(255, 150, 20, 0.35),
+      inset 0 0 22px rgba(255, 90, 31, 0.12);
   }
 }
 
 @media (max-width: 600px) {
   body {
     padding: 24px 14px 72px;
+  }
+
+  .player-row {
+    gap: 6px;
+  }
+
+  .rank-change {
+    width: 32px;
+  }
+
+  .rank-change .change {
+    font-size: 0.6rem;
   }
 
   .player-card {
@@ -521,9 +597,18 @@ body {
     padding: 3px 8px;
   }
 
+  .winstreak-tag {
+    top: 36px;
+  }
+
+  .winstreak-tag.winstreak-solo {
+    top: 10px;
+  }
+
   .player-card.motm .card-body h3,
-  .player-card.winstreak .card-body h3,
-  .player-card.rusty .card-body h3 {
+  .player-card.in-form .card-body h3,
+  .player-card.rusty .card-body h3,
+  .player-card.winstreak .card-body h3 {
     padding-right: 76px;
   }
 
